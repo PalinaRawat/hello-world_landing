@@ -15,11 +15,11 @@ body {
   text-align: center;
 }
 section {
-  height: 55vh;
+  min-height: 55vh;
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .box {
@@ -81,6 +81,9 @@ a:focus, button:focus {
   text-align: left;
   font-weight: 200;
 }
+h2 {
+  padding: 0px;
+}
 
 li {
   margin: 3px;
@@ -114,7 +117,6 @@ input[type=text], select {
   background-color: #ac7b77;
   color: white;
   font-weight: 500;
-  margin-bottom: 10px;
   margin-top: 20px;
 }
 .updates:hover {
