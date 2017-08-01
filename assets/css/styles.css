@@ -15,7 +15,8 @@ body {
   text-align: center;
 }
 section {
-  min-height: 55vh;
+  height: auto;
+  min-height: 50vh;
 }
 
 main {
