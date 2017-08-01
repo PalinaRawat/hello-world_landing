@@ -44,21 +44,57 @@ h1 {
 p {
   font-size: 20px;
 }
-
-nav {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.desktop-nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-nav a {
+.desktop-nav a {
   padding: 20px 10px;
   color: #C1FFF2;
-  align-self: center;
   font-size: 20px;
 }
-nav a span:hover {
+.desktop-nav a span:hover {
   padding-bottom: 12px;
   border-bottom: 3px solid #C1FFF2;
+}
+.nav-con {
+  display: block;
+}
+.nav-con .fa {
+  float: right;
+}
+.nav-con .logo {
+  float: left;
+  font-family: 'Short Stack', sans-serif;
+}
+.mobile-nav {
+  display: none;
+  width: 100%;
+}
+.mobile-nav .nav-con {
+  width: 100%;
+  text-align: left;
+}
+.mobile-nav-content {
+  padding-top: 0;
+}
+.mobile-nav-content a {
+  display: block;
+  padding-top: 5px;
+  text-align: left;
+}
+@media screen and (max-width:380px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
 }
 
 a {
@@ -110,7 +146,7 @@ input[type=text], select {
     box-sizing: border-box;
     background: rgba(16, 27, 36, 0.9);
 }
-.updates {  
+.updates {
   font-family: 'Short Stack', sans-serif;
   font-size: 20px;
   border-radius: 5px;
@@ -130,7 +166,7 @@ input[type=text], select {
   text-decoration: underline;
   padding-left: 5px;
 }
-.mentor {  
+.mentor {
   font-family: 'Short Stack', sans-serif;
   font-size: 20px;
   border-radius: 5px;
