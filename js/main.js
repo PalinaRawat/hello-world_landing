@@ -7,15 +7,15 @@ $(".updates").on('click',function() {
     $(".subconfirm").addClass('hidden');
     return;
   }
-  $.post( "http://api.helloworld.purduehackers.com/api/user/interest", {
-     email: $("#emailField").val()
-   }).done(function(result) {
-    //Show a confirmation label
-    $(".subconfirm").removeClass('hidden');
-    $(".suberror").addClass('hidden');
-  }).fail(function(error) {
-   console.log("error: " + JSON.stringify(error));
- });
+  sendRequest($("#emailField").val(),{
+    success: function(request) {
+      $(".subconfirm").removeClass('hidden');
+      $(".suberror").addClass('hidden');
+    },
+    failure: function(request) {
+      console.log("Yikes, something went wrong!");
+    }
+  });
 });
 
 function validateEmail(email) {
@@ -40,3 +40,22 @@ $(document).ready(function () {
     menuVisible = false;
   });
 });
+
+
+function sendRequest(email,callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://api.helloworld.purduehackers.com/api/user/interest', true);
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhr.onload = function () {
+    if(this.status == 200) {
+      callback.success(this);
+    } else {
+      callback.failure(this);
+    }
+  };
+  xhr.onerror = function () {
+      // do something to response
+      callback.failure(this);
+  };
+  xhr.send('email='+email);
+}
