@@ -13,7 +13,7 @@ $(".updates").on('click',function() {
       $(".suberror").addClass('hidden');
     },
     failure: function(request) {
-      console.log("Yiks, something went wrong!");
+      console.log("Yikes, something went wrong!");
     }
   });
 });
