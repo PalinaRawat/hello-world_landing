@@ -52,6 +52,7 @@ a {
 .desktop-nav a:hover {
   padding-bottom: 12px;
   border-bottom: 3px solid #C1FFF2;
+  cursor: pointer;
 }
 
 .nav-con .fa {
@@ -73,8 +74,9 @@ a {
   text-align: left;
   max-width: 380px;
 }
-.mobile-nav-content {
+#mobile-nav-content {
   padding-top: 0;
+  display: none;
 }
 .mobile-nav-content a {
   display: block;
@@ -88,6 +90,9 @@ a {
   .mobile-nav {
     display: block;
   }
+}
+i:hover {
+  cursor: pointer;
 }
 
 footer {
