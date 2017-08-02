@@ -44,7 +44,7 @@ $(document).ready(function () {
 
 function sendRequest(email,callback) {
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'http://api.helloworld.purduehackers.com/api/user/interest', true);
+  xhr.open('POST', 'https://api.helloworld.purduehackers.com/api/user/interest', true);
   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   xhr.onload = function () {
     if(this.status == 200) {
